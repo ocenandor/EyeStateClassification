@@ -1,0 +1,8 @@
+__pycache__
+*Eyes*/**
+*.zip
+extra_data
+**checkpoints**
+**logs**
+notebooks
+**.ckpt
