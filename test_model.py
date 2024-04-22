@@ -18,7 +18,7 @@ model = OpenEyesClassificator()
 df = pd.read_csv('image_labels.csv')
 paths = df['Image_Path']
 labels = df['Label']
-N = 50
+N = 1
 start = time.perf_counter()
 for _ in tqdm(range(N)):    
     predictions = np.array(list(map(model.predict, paths)))

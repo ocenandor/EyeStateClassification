@@ -8,7 +8,7 @@ from src.model import ResNet
 class OpenEyesClassificator:
     def __init__(self) -> None:
         self.model = ResNet()
-        self.model.load_state_dict(torch.load('model_weights/best_model.ckpt')['state_dict'])
+        self.model.load_state_dict(torch.load('model_weights/best_model.ckpt', map_location='cpu')['state_dict'])
         self.model.eval()
         self.transforms = T.Compose([
             T.ToTensor(),
